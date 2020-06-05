@@ -72,10 +72,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import org.wso2.am.integration.clients.admin.api.*;
-import org.wso2.am.integration.clients.admin.api.auth.*;
-import org.wso2.am.integration.clients.admin.api.v1.dto.*;
-import org.wso2.am.integration.clients.admin.api.v1.AdvancedPolicyCollectionApi;
+import org.wso2.am.integration.clients.admin.*;
+import org.wso2.am.integration.clients.admin.auth.*;
+import org.wso2.am.integration.clients.admin.api.dto.*;
+import org.wso2.am.integration.clients.admin.api.AdvancedPolicyCollectionApi;
 
 import java.io.File;
 import java.util.*;
@@ -138,6 +138,11 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**botDataAddEmailPost**](docs/DefaultApi.md#botDataAddEmailPost) | **POST** /botData/addEmail | Add an Email
 *DefaultApi* | [**botDataDeleteEmailDelete**](docs/DefaultApi.md#botDataDeleteEmailDelete) | **DELETE** /botData/deleteEmail | Delete an configured email.
 *DefaultApi* | [**botDataGetEmailListGet**](docs/DefaultApi.md#botDataGetEmailListGet) | **GET** /botData/getEmailList | Get all configured email list 
+*KeyManagerCollectionApi* | [**keyManagersGet**](docs/KeyManagerCollectionApi.md#keyManagersGet) | **GET** /key-managers | Get all Key managers
+*KeyManagerCollectionApi* | [**keyManagersPost**](docs/KeyManagerCollectionApi.md#keyManagersPost) | **POST** /key-managers | Add a new API Key Manager
+*KeyManagerIndividualApi* | [**keyManagersKeyManagerIdDelete**](docs/KeyManagerIndividualApi.md#keyManagersKeyManagerIdDelete) | **DELETE** /key-managers/{keyManagerId} | Delete a Key Manager
+*KeyManagerIndividualApi* | [**keyManagersKeyManagerIdGet**](docs/KeyManagerIndividualApi.md#keyManagersKeyManagerIdGet) | **GET** /key-managers/{keyManagerId} | Get a Key Manager Configuration
+*KeyManagerIndividualApi* | [**keyManagersKeyManagerIdPut**](docs/KeyManagerIndividualApi.md#keyManagersKeyManagerIdPut) | **PUT** /key-managers/{keyManagerId} | Update a Key Manager
 *LabelApi* | [**labelsLabelIdDelete**](docs/LabelApi.md#labelsLabelIdDelete) | **DELETE** /labels/{labelId} | Delete a Label
 *LabelApi* | [**labelsLabelIdPut**](docs/LabelApi.md#labelsLabelIdPut) | **PUT** /labels/{labelId} | Update a Label
 *LabelApi* | [**labelsPost**](docs/LabelApi.md#labelsPost) | **POST** /labels | Add a Label
@@ -156,8 +161,6 @@ Class | Method | HTTP request | Description
 *SubscriptionPolicyIndividualApi* | [**throttlingPoliciesSubscriptionPolicyIdPut**](docs/SubscriptionPolicyIndividualApi.md#throttlingPoliciesSubscriptionPolicyIdPut) | **PUT** /throttling/policies/subscription/{policyId} | Update a Subscription Policy
 *TenantsApi* | [**getCustomUrlInfoByTenantDomain**](docs/TenantsApi.md#getCustomUrlInfoByTenantDomain) | **GET** /custom-urls/{tenantDomain} | Get custom-url info of a tenant domain 
 *TenantsApi* | [**getTenantInfoByUsername**](docs/TenantsApi.md#getTenantInfoByUsername) | **GET** /tenant-info/{username} | Get tenant id of the user 
-*WorkflowCollectionApi* | [**workflowsGet**](docs/WorkflowCollectionApi.md#workflowsGet) | **GET** /workflows | Retrieve All pending workflow processes 
-*WorkflowsIndividualApi* | [**workflowsExternalWorkflowRefGet**](docs/WorkflowsIndividualApi.md#workflowsExternalWorkflowRefGet) | **GET** /workflows/{externalWorkflowRef} | Get details of a the pending workflow request according to the External Workflow Reference. 
 *WorkflowsIndividualApi* | [**workflowsUpdateWorkflowStatusPost**](docs/WorkflowsIndividualApi.md#workflowsUpdateWorkflowStatusPost) | **POST** /workflows/update-workflow-status | Update workflow status
 
 
@@ -173,6 +176,7 @@ Class | Method | HTTP request | Description
  - [ApplicationThrottlePolicyListDTO](docs/ApplicationThrottlePolicyListDTO.md)
  - [BlockingConditionDTO](docs/BlockingConditionDTO.md)
  - [BlockingConditionListDTO](docs/BlockingConditionListDTO.md)
+ - [ClaimMappingEntryDTO](docs/ClaimMappingEntryDTO.md)
  - [ConditionalGroupDTO](docs/ConditionalGroupDTO.md)
  - [CustomAttributeDTO](docs/CustomAttributeDTO.md)
  - [CustomRuleListDTO](docs/CustomRuleListDTO.md)
@@ -182,6 +186,9 @@ Class | Method | HTTP request | Description
  - [ErrorDTO](docs/ErrorDTO.md)
  - [ErrorListItemDTO](docs/ErrorListItemDTO.md)
  - [FileInfoDTO](docs/FileInfoDTO.md)
+ - [KeyManagerDTO](docs/KeyManagerDTO.md)
+ - [KeyManagerInfoDTO](docs/KeyManagerInfoDTO.md)
+ - [KeyManagerListDTO](docs/KeyManagerListDTO.md)
  - [LabelDTO](docs/LabelDTO.md)
  - [LabelListDTO](docs/LabelListDTO.md)
  - [MediationDTO](docs/MediationDTO.md)
@@ -195,9 +202,8 @@ Class | Method | HTTP request | Description
  - [ThrottleConditionDTO](docs/ThrottleConditionDTO.md)
  - [ThrottleLimitDTO](docs/ThrottleLimitDTO.md)
  - [ThrottlePolicyDTO](docs/ThrottlePolicyDTO.md)
+ - [TokenValidationDTO](docs/TokenValidationDTO.md)
  - [WorkflowDTO](docs/WorkflowDTO.md)
- - [WorkflowInfoDTO](docs/WorkflowInfoDTO.md)
- - [WorkflowListDTO](docs/WorkflowListDTO.md)
  - [AdvancedThrottlePolicyDTO](docs/AdvancedThrottlePolicyDTO.md)
  - [AdvancedThrottlePolicyInfoDTO](docs/AdvancedThrottlePolicyInfoDTO.md)
  - [ApplicationThrottlePolicyDTO](docs/ApplicationThrottlePolicyDTO.md)
